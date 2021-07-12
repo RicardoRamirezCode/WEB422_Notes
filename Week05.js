@@ -147,6 +147,32 @@ Processing Forms in React
             );
 
             }
+
+
+Recap:
+// how to process form, first is handleSubmit, second is handle change
+
+    // event handler is inside form as attribute :
+    // <form onSubmit={handleSubmit}>
+    // it is not placed as attribute on 'submit button'
+
+    // each form element has 'handleChange'
+
+    then must bind the property of view model:
+    const [userData, setUserData] = useState(null);
+    with form controls
+
+    this means everytime the data inside the view model values change it must immediately reflect on the html form
+    accomplished via the form control 'value'; note radio buttons still must have values yet checkBox does not have value
+
+    !!!!!!this is one way how we bind the view model (the data of the state) to the html form
+
+    other way we bind is on onChange; if the value changed then through event handler onChange the data should immediately change
+
+    
+    for data value (form controls) on html form, we have three kinds of data: string, boolean (for checkbox), and string[] (for select)
+
+
 **********
 
 Hosting on Vercel
